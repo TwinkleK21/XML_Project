@@ -1,0 +1,238 @@
+<ADMISSION>  
+  <STAFF StaffID="StaffID-1">
+	<StaffName>James Howlett</StaffName>
+	<StaffEmail>wolverine@gmail.com</StaffEmail>
+	<StaffPhone>123-456-7890</StaffPhone>
+	<Title>mutant</Title>
+	<Salary>25000</Salary>
+  </STAFF>
+
+  <STAFF StaffID="StaffID-2">
+	<StaffName>Peter Parker</StaffName>
+	<StaffEmail>spiderman@google.org</StaffEmail>
+	<StaffPhone>234-456-7890</StaffPhone>
+	<Title>scientist</Title>
+	<Salary>50000</Salary>
+  </STAFF>
+
+  <STAFF StaffID="StaffID-3">
+	<StaffName>Tony Stark</StaffName>
+	<StaffEmail>ironman@hotmail.edu</StaffEmail>
+	<StaffPhone>345-456-7890</StaffPhone>
+	<Title>avenger</Title>
+	<Salary>75000</Salary>
+  </STAFF>
+
+  <STAFF StaffID="StaffID-4">
+	<StaffName>Steve Banner</StaffName>
+	<StaffEmail>hulk@yahoo.com</StaffEmail>
+	<StaffPhone>456-456-7890</StaffPhone>
+	<Title>avenger</Title>
+	<Salary>90000</Salary>
+  </STAFF>
+
+  <STAFF StaffID="StaffID-5">
+	<StaffName>Steve Rogers</StaffName>
+	<StaffEmail>captainamerica@hotmail.org</StaffEmail>
+	<StaffPhone>567-456-7890</StaffPhone>
+	<Title>avenger</Title>
+	<Salary>100000</Salary>
+  </STAFF>  
+  
+  <APPLICANTS ApplicantID="ApplicantID-1" StaffID="StaffID-1">
+	<ApplicantName>abc</ApplicantName>
+	<ApplicantEmail>abc@gmail.com</ApplicantEmail>
+	<ApplicantPhone>7030303030</ApplicantPhone>
+	<DOB>2019-09-11</DOB>
+  </APPLICANTS>  
+  
+  <APPLICANTS ApplicantID="ApplicantID-2" StaffID="StaffID-1">
+	<ApplicantName>bcd</ApplicantName>
+	<ApplicantEmail>bcd@gmail.com</ApplicantEmail>
+	<ApplicantPhone>7030303031</ApplicantPhone>
+	<DOB>2019-09-12</DOB>
+  </APPLICANTS> 
+
+<APPLICANTS ApplicantID="ApplicantID-3" StaffID="StaffID-2">
+	<ApplicantName>cde</ApplicantName>
+	<ApplicantEmail>cde@gmail.com</ApplicantEmail>
+	<ApplicantPhone>7030303032</ApplicantPhone>
+	<DOB>2019-09-01</DOB>
+  </APPLICANTS> 
+
+<APPLICANTS ApplicantID="ApplicantID-4" StaffID="StaffID-2">
+	<ApplicantName>def</ApplicantName>
+	<ApplicantEmail>def@gmail.com</ApplicantEmail>
+	<ApplicantPhone>7030303033</ApplicantPhone>
+	<DOB>2019-09-14</DOB>
+  </APPLICANTS> 
+
+<APPLICANTS ApplicantID="ApplicantID-5" StaffID="StaffID-3">
+	<ApplicantName>efg</ApplicantName>
+	<ApplicantEmail>efg@gmail.com</ApplicantEmail>
+	<ApplicantPhone>7030303045</ApplicantPhone>
+	<DOB>2019-11-11</DOB>
+  </APPLICANTS> 
+
+<APPLICANTS ApplicantID="ApplicantID-6" StaffID="StaffID-3">
+	<ApplicantName>fgh</ApplicantName>
+	<ApplicantEmail>fgh@gmail.com</ApplicantEmail>
+	<ApplicantPhone>7030303090</ApplicantPhone>
+	<DOB>2019-05-11</DOB>
+  </APPLICANTS> 
+
+<APPLICANTS ApplicantID="ApplicantID-7" StaffID="StaffID-4">
+	<ApplicantName>ghi</ApplicantName>
+	<ApplicantEmail>ghi@gmail.com</ApplicantEmail>
+	<ApplicantPhone>7030303045</ApplicantPhone>
+	<DOB>2019-07-11</DOB>
+  </APPLICANTS> 
+
+<APPLICANTS ApplicantID="ApplicantID-8" StaffID="StaffID-4">
+	<ApplicantName>hij</ApplicantName>
+	<ApplicantEmail>hij@gmail.com</ApplicantEmail>
+	<ApplicantPhone>7030303031</ApplicantPhone>
+	<DOB>2019-09-11</DOB>
+  </APPLICANTS>   
+  
+ <APPLICANTS ApplicantID="ApplicantID-9" StaffID="StaffID-5">
+	<ApplicantName>ijk</ApplicantName>
+	<ApplicantEmail>ijk@gmail.com</ApplicantEmail>
+	<ApplicantPhone>7030303067</ApplicantPhone>
+	<DOB>2019-09-11</DOB>
+  </APPLICANTS>   
+  
+  <APPLICANTS ApplicantID="ApplicantID-10" StaffID="StaffID-5">
+	<ApplicantName>jkl</ApplicantName>
+	<ApplicantEmail>jkl@gmail.com</ApplicantEmail>
+	<ApplicantPhone>7030303031</ApplicantPhone>
+	<DOB>2019-09-11</DOB>
+  </APPLICANTS>   
+  
+  
+
+  <EVENTS EventID="EventID-1">
+	<Description>Test Desciption</Description>
+	<Location>Campus Center</Location>
+	<EventDate>2019-09-14</EventDate>
+  </EVENTS> 
+
+  <EVENTS EventID="EventID-2">
+	<Description>Freshers Party</Description>
+	<Location>Lawn</Location>
+	<EventDate>2019-09-20</EventDate>
+  </EVENTS> 
+
+  <EVENTS EventID="EventID-3">
+	<Description>career Fair</Description>
+	<Location>Activities Center</Location>
+	<EventDate>2019-09-11</EventDate>
+  </EVENTS> 
+
+  <EVENTS EventID="EventID-4">
+	<Description>Grad Ceremony</Description>
+	<Location>Campus Center</Location>
+	<EventDate>2019-09-07</EventDate>
+  </EVENTS>   
+  
+  <ATTENDS EventID="EventID-1" ApplicantID="ApplicantID-1">
+	<AttendsID>AttendsID-01</AttendsID>
+	<Rating>1</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-1" ApplicantID="ApplicantID-1">
+	<AttendsID>AttendsID-02</AttendsID>
+	<Rating>2</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-1" ApplicantID="ApplicantID-2">
+	<AttendsID>AttendsID-03</AttendsID>
+	<Rating>3</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-1" ApplicantID="ApplicantID-2">
+	<AttendsID>AttendsID-04</AttendsID>
+	<Rating>4</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-1" ApplicantID="ApplicantID-3">
+	<AttendsID>AttendsID-05</AttendsID>
+	<Rating>5</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-2" ApplicantID="ApplicantID-3">
+	<AttendsID>AttendsID-06</AttendsID>
+	<Rating>6</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-2" ApplicantID="ApplicantID-4">
+	<AttendsID>AttendsID-07</AttendsID>
+	<Rating>7</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-2" ApplicantID="ApplicantID-4">
+	<AttendsID>AttendsID-08</AttendsID>
+	<Rating>8</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-2" ApplicantID="ApplicantID-5">
+	<AttendsID>AttendsID-09</AttendsID>
+	<Rating>9</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-2" ApplicantID="ApplicantID-5">
+	<AttendsID>AttendsID-10</AttendsID>
+	<Rating>10</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-3" ApplicantID="ApplicantID-6">
+	<AttendsID>AttendsID-11</AttendsID>
+	<Rating>1</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-3" ApplicantID="ApplicantID-6">
+	<AttendsID>AttendsID-12</AttendsID>
+	<Rating>2</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-3" ApplicantID="ApplicantID-7">
+	<AttendsID>AttendsID-13</AttendsID>
+	<Rating>3</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-3" ApplicantID="ApplicantID-7">
+	<AttendsID>AttendsID-14</AttendsID>
+	<Rating>4</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-3" ApplicantID="ApplicantID-8">
+	<AttendsID>AttendsID-15</AttendsID>
+	<Rating>5</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-4" ApplicantID="ApplicantID-8">
+	<AttendsID>AttendsID-16</AttendsID>
+	<Rating>6</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-4" ApplicantID="ApplicantID-9">
+	<AttendsID>AttendsID-17</AttendsID>
+	<Rating>7</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-4" ApplicantID="ApplicantID-9">
+	<AttendsID>AttendsID-18</AttendsID>
+	<Rating>8</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-4" ApplicantID="ApplicantID-10">
+	<AttendsID>AttendsID-19</AttendsID>
+	<Rating>9</Rating>
+  </ATTENDS>   
+
+  <ATTENDS EventID="EventID-4" ApplicantID="ApplicantID-10">
+	<AttendsID>AttendsID-20</AttendsID>
+	<Rating>10</Rating>
+  </ATTENDS>     
+  
+</ADMISSION> 

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT ADMISSION (STAFF+, APPLICANTS+, EVENTS+, ATTENDS+)>
+<!ELEMENT STAFF (StaffName, StaffEmail, StaffPhone, Title, Salary)>
+<!ATTLIST STAFF
+          StaffID ID #REQUIRED>
+<!ELEMENT StaffName (#PCDATA)>
+<!ELEMENT StaffEmail (#PCDATA)>
+<!ELEMENT StaffPhone (#PCDATA)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Salary (#PCDATA)>
+<!ELEMENT APPLICANTS (ApplicantName, ApplicantEmail, ApplicantPhone, DOB)>
+<!ATTLIST APPLICANTS
+          ApplicantID ID #REQUIRED
+          StaffID IDREF #REQUIRED>
+<!ELEMENT ApplicantName (#PCDATA)>
+<!ELEMENT ApplicantEmail (#PCDATA)>
+<!ELEMENT ApplicantPhone (#PCDATA)>
+<!ELEMENT DOB (#PCDATA)>
+<!ELEMENT EVENTS (Description, Location, EventDate)>
+<!ATTLIST EVENTS
+          EventID ID #REQUIRED>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT Location (#PCDATA)>
+<!ELEMENT EventDate (#PCDATA)>
+<!ELEMENT ATTENDS (AttendsID, Rating)>
+<!ATTLIST ATTENDS
+          ApplicantID IDREF #REQUIRED
+          EventID IDREF #REQUIRED>
+<!ELEMENT AttendsID (#PCDATA)>
+<!ELEMENT Rating (#PCDATA)>

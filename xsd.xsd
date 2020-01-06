@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <xsd:element name="ADMISSION">
+      <xsd:complexType>
+         <xsd:sequence minOccurs="1" maxOccurs="1">
+            <xsd:element name="STAFF" maxOccurs="unbounded">
+               <xsd:complexType>
+                  <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+                     <xsd:element type="xsd:string" name="StaffName" />
+                     <xsd:element name="StaffEmail">
+                        <xsd:simpleType>
+                           <xsd:restriction base="xsd:string">
+                              <xsd:pattern value=".*@.*(.com|.edu|.org)" />
+                           </xsd:restriction>
+                        </xsd:simpleType>
+                     </xsd:element>
+                     <xsd:element name="StaffPhone">
+                        <xsd:simpleType>
+                           <xsd:restriction base="xsd:string">
+                              <xsd:pattern value="[0-9]{3}.{7,11}" />
+                           </xsd:restriction>
+                        </xsd:simpleType>
+                     </xsd:element>
+                     <xsd:element type="xsd:string" name="Title" />
+                     <xsd:element name="Salary">
+                        <xsd:simpleType>
+                           <xsd:restriction base="xsd:positiveInteger">
+                              <xsd:minInclusive value="25000" />
+                              <xsd:maxInclusive value="100000" />
+                           </xsd:restriction>
+                        </xsd:simpleType>
+                     </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="StaffID" type="xsd:string" use="required" />
+               </xsd:complexType>
+            </xsd:element>
+			<xsd:element name="APPLICANTS" maxOccurs="unbounded">
+               <xsd:complexType>
+                  <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+                     <xsd:element name="ApplicantName" type="xsd:string"/>
+					  <xsd:element name="ApplicantEmail" type="xsd:string"/>
+					  <xsd:element name="ApplicantPhone" type="xsd:positiveInteger"/>
+					  <xsd:element name="DOB" type="xsd:date"/>
+                  </xsd:sequence>
+                  <xsd:attribute name="ApplicantID" type="xsd:string" use="required" />
+				  <xsd:attribute name="StaffID" type="xsd:string" use="required" />
+               </xsd:complexType>
+            </xsd:element>
+			<xsd:element name="EVENTS" maxOccurs="unbounded">
+               <xsd:complexType>
+                  <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+                     <xsd:element name="Description" type="xsd:string"/>
+					  <xsd:element name="Location">
+					  <xsd:simpleType>
+					  <xsd:restriction base="xsd:string">
+						<xsd:enumeration value="Campus Center"/>
+						<xsd:enumeration value="Lawn"/>
+						<xsd:enumeration value="Activities Center"/>
+					  </xsd:restriction>
+					  </xsd:simpleType>
+					 </xsd:element>
+					  <xsd:element name="EventDate" type="xsd:date"/>
+                  </xsd:sequence>
+                  <xsd:attribute name="EventID" type="xsd:string" use="required" />
+               </xsd:complexType>
+            </xsd:element>
+			<xsd:element name="ATTENDS" minOccurs="1" maxOccurs="unbounded">
+               <xsd:complexType>
+                  <xsd:sequence>
+					<xsd:element name="AttendsID" type="xsd:string"/>
+                     <xsd:element name="Rating">
+					 <xsd:simpleType>
+					 <xsd:restriction base="xsd:integer">
+						<xsd:minInclusive value="1"/>
+						<xsd:maxInclusive value="10"/>
+					</xsd:restriction>
+					</xsd:simpleType>
+					</xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="ApplicantID" type="xsd:string" use="required" />
+				  <xsd:attribute name="EventID" type="xsd:string" use="required" />
+               </xsd:complexType>
+            </xsd:element>
+         </xsd:sequence>
+      </xsd:complexType>
+      <xsd:key name="PKstaffID">
+         <xsd:selector xpath="./STAFF" />
+         <xsd:field xpath="@StaffID" />
+      </xsd:key>
+	  <xsd:key name="PKapplicantID">
+         <xsd:selector xpath="./APPLICANTS" />
+         <xsd:field xpath="@ApplicantID" />
+      </xsd:key>
+	  <xsd:keyref name="FKstaffID" refer="PKstaffID">
+		  <xsd:selector xpath="./APPLICANTS"/>
+		  <xsd:field xpath="@StaffID"/>
+	  </xsd:keyref>
+	  <xsd:key name="PKeventID">
+         <xsd:selector xpath="./EVENTS" />
+         <xsd:field xpath="@EventID" />
+      </xsd:key>
+	  <xsd:keyref name="FKapplicantID" refer="PKapplicantID">
+         <xsd:selector xpath="./ATTENDS" />
+         <xsd:field xpath="@ApplicantID" />
+      </xsd:keyref>
+	  <xsd:keyref name="FKeventID" refer="PKeventID">
+         <xsd:selector xpath="./ATTENDS" />
+         <xsd:field xpath="@EventID" />
+      </xsd:keyref>
+   </xsd:element>
+</xsd:schema>
